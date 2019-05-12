@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -9,23 +8,6 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   String title1 = 'มาสเตอร์ อึ่ง';
   String title2 = 'www.androidthai.in.th';
-
-  static String url =
-      "https://www.youtube.com/watch?v=mtwqZpV3K1c&list=PLHk7DPiGKGNDEI-YvHjhztFCIHBBXmY7o";
-  final objWebView = FlutterWebviewPlugin();
-
-  @override
-  void initState() {
-    super.initState();
-
-    objWebView.close();
-  }
-
-  @override
-  void dispose() {
-    objWebView.dispose();
-    super.dispose();
-  }
 
   Widget showTitle() {
     return Text(
@@ -72,9 +54,12 @@ class _HomeState extends State<Home> {
               color: Colors.green[900],
             ),
             title: Text(
-              'Home',
+              'โดนใจ 1',
               style: TextStyle(fontSize: 18.0),
             ),
+            subtitle: Text('เพลงโดนใจ'),onTap: (){
+              var menu1Route = MaterialPageRoute();
+            },
           ),
           ListTile(
             leading: Icon(
@@ -82,7 +67,7 @@ class _HomeState extends State<Home> {
               color: Colors.green[900],
             ),
             title: Text(
-              'แอนดรอยด์',
+              'ชอบ 1',
               style: TextStyle(fontSize: 18.0),
             ),
           )
@@ -90,16 +75,17 @@ class _HomeState extends State<Home> {
       ),
     );
   }
-  
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: WebviewScaffold(
-      url: url,
-      withJavascript: true,
-      withLocalStorage: true,
-      withZoom: true,
-    ));
+      appBar: AppBar(
+        title: Text('Video Ung'),
+      ),
+      body: Container(
+        child: Text('Hello'),
+      ),
+      drawer: menuDrawer(context),
+    );
   }
 }
