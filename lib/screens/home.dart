@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'menu1.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -57,8 +58,15 @@ class _HomeState extends State<Home> {
               'โดนใจ 1',
               style: TextStyle(fontSize: 18.0),
             ),
-            subtitle: Text('เพลงโดนใจ'),onTap: (){
-              var menu1Route = MaterialPageRoute();
+            subtitle: Text('เพลงโดนใจ'),
+            onTap: () {
+
+              Navigator.of(context).pop();
+
+              var menu1Route =
+                  MaterialPageRoute(builder: (BuildContext context) => Menu1());
+                  Navigator.of(context).push(menu1Route);
+                 
             },
           ),
           ListTile(
