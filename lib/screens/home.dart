@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'menu1.dart';
+import 'menu2.dart';
+import 'menu3.dart';
+import 'menu4.dart';
+import 'menu5.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -52,7 +56,7 @@ class _HomeState extends State<Home> {
           ListTile(
             leading: Icon(
               Icons.home,
-              color: Colors.green[900],
+              color: Colors.green[900],size: 48.0,
             ),
             title: Text(
               'โดนใจ 1',
@@ -60,24 +64,84 @@ class _HomeState extends State<Home> {
             ),
             subtitle: Text('เพลงโดนใจ'),
             onTap: () {
-
               Navigator.of(context).pop();
 
               var menu1Route =
                   MaterialPageRoute(builder: (BuildContext context) => Menu1());
-                  Navigator.of(context).push(menu1Route);
-                 
+              Navigator.of(context).push(menu1Route);
             },
           ),
           ListTile(
             leading: Icon(
-              Icons.android,
+              Icons.fingerprint,
               color: Colors.green[900],
             ),
             title: Text(
               'ชอบ 1',
               style: TextStyle(fontSize: 18.0),
             ),
+            subtitle: Text('เพลงโดนใจ ชอบๆๆๆ'),
+            onTap: () {
+              Navigator.of(context).pop();
+
+              var menuRoute =
+                  MaterialPageRoute(builder: (BuildContext context) => Menu2());
+              Navigator.of(context).push(menuRoute);
+            },
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.face,
+              color: Colors.green[900],
+            ),
+            title: Text(
+              'ชอบ 2',
+              style: TextStyle(fontSize: 18.0),
+            ),
+            subtitle: Text('เพลงโดนใจ ชอบๆๆๆ นะจ้ะ'),
+            onTap: () {
+              Navigator.of(context).pop();
+
+              var menuRoute =
+                  MaterialPageRoute(builder: (BuildContext context) => Menu3());
+              Navigator.of(context).push(menuRoute);
+            },
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.favorite,
+              color: Colors.green[900],
+            ),
+            title: Text(
+              'ชอบ 3',
+              style: TextStyle(fontSize: 18.0),
+            ),
+            subtitle: Text('เพลงโดนใจ ชอบๆๆๆ ตรงๆๆ'),
+            onTap: () {
+              Navigator.of(context).pop();
+
+              var menu4Route =
+                  MaterialPageRoute(builder: (BuildContext context) => Menu4());
+              Navigator.of(context).push(menu4Route);
+            },
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.fastfood,
+              color: Colors.green[900],
+            ),
+            title: Text(
+              'ชอบ 4',
+              style: TextStyle(fontSize: 18.0),
+            ),
+            subtitle: Text('เพลงโดนใจ ชอบๆๆๆ มากมาย'),
+            onTap: () {
+              Navigator.of(context).pop();
+
+              var menuRoute =
+                  MaterialPageRoute(builder: (BuildContext context) => Menu5());
+              Navigator.of(context).push(menuRoute);
+            },
           )
         ],
       ),
