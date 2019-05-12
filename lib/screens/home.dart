@@ -56,7 +56,8 @@ class _HomeState extends State<Home> {
           ListTile(
             leading: Icon(
               Icons.home,
-              color: Colors.green[900],size: 48.0,
+              color: Colors.green[900],
+              size: 48.0,
             ),
             title: Text(
               'โดนใจ 1',
@@ -148,6 +149,31 @@ class _HomeState extends State<Home> {
     );
   }
 
+  Widget showContent() {
+    return ListView(
+      children: <Widget>[
+        Container(
+          height: 150.0,
+          child: Image.asset('images/logo.png'),
+        ),
+        Container(
+          margin: EdgeInsets.only(left: 30.0, right: 30.0),
+          child: Text(
+              'Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์ มันได้กลายมาเป็นเนื้อหาจำลองมาตรฐานของธุรกิจดังกล่าวมาตั้งแต่ศตวรรษที่ 16 เมื่อเครื่องพิมพ์โนเนมเครื่องหนึ่งนำรางตัวพิมพ์มาสลับสับตำแหน่งตัวอักษรเพื่อทำหนังสือตัวอย่าง Lorem Ipsum อยู่ยงคงกระพันมาไม่ใช่แค่เพียงห้าศตวรรษ แต่อยู่มาจนถึงยุคที่พลิกโฉมเข้าสู่งานเรียงพิมพ์ด้วยวิธีทางอิเล็กทรอนิกส์'),
+        ),
+        Container(
+          margin: EdgeInsets.all(30.0),
+          child: Image.asset('images/bannerFlutter.png'),
+        ),
+        Container(
+          margin: EdgeInsets.only(left: 30.0, right: 30.0),
+          child: Text(
+              'Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์ มันได้กลายมาเป็นเนื้อหาจำลองมาตรฐานของธุรกิจดังกล่าวมาตั้งแต่ศตวรรษที่ 16 เมื่อเครื่องพิมพ์โนเนมเครื่องหนึ่งนำรางตัวพิมพ์มาสลับสับตำแหน่งตัวอักษรเพื่อทำหนังสือตัวอย่าง Lorem Ipsum อยู่ยงคงกระพันมาไม่ใช่แค่เพียงห้าศตวรรษ แต่อยู่มาจนถึงยุคที่พลิกโฉมเข้าสู่งานเรียงพิมพ์ด้วยวิธีทางอิเล็กทรอนิกส์'),
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -155,7 +181,7 @@ class _HomeState extends State<Home> {
         title: Text('Video Ung'),
       ),
       body: Container(
-        child: Text('Hello'),
+        child: showContent(),
       ),
       drawer: menuDrawer(context),
     );
