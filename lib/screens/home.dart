@@ -10,23 +10,20 @@ class _HomeState extends State<Home> {
   String title1 = 'มาสเตอร์ อึ่ง';
   String title2 = 'www.androidthai.in.th';
 
-  static String url = "https://www.youtube.com/watch?v=bD4d437DZu8&list=PLHk7DPiGKGNBStrMsbmAd0RbzAUAMONpX";
+  static String url =
+      "https://www.youtube.com/watch?v=mtwqZpV3K1c&list=PLHk7DPiGKGNDEI-YvHjhztFCIHBBXmY7o";
   final objWebView = FlutterWebviewPlugin();
-  TextEditingController textEditingController =
-      TextEditingController(text: url);
 
   @override
   void initState() {
     super.initState();
 
     objWebView.close();
-    textEditingController.addListener(() {});
   }
 
   @override
   void dispose() {
     objWebView.dispose();
-    textEditingController.dispose();
     super.dispose();
   }
 
@@ -96,14 +93,12 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return WebviewScaffold(
-      appBar: AppBar(
-        title: showTitle(),
-      ),
+    return Scaffold(
+        body: WebviewScaffold(
       url: url,
       withJavascript: true,
       withLocalStorage: true,
       withZoom: true,
-    );
+    ));
   }
 }
